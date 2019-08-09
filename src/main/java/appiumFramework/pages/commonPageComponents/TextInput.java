@@ -1,5 +1,6 @@
 package appiumFramework.pages.commonPageComponents;
 
+import appiumFramework.capabilities.WebDriverDecorator;
 import org.openqa.selenium.By;
 
 public class TextInput extends UIObject {
@@ -8,6 +9,6 @@ public class TextInput extends UIObject {
     }
 
     public void sendKeys(String text) {
-        getDriver().findElement(By.xpath(this.locator)).sendKeys(text);
+        WebDriverDecorator.getDriver().findElement(By.xpath(this.locator)).sendKeys(text);
     }
 }

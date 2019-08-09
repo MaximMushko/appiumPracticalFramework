@@ -1,5 +1,6 @@
 package appiumFramework.pages.commonPageComponents;
 
+import appiumFramework.capabilities.WebDriverDecorator;
 import org.openqa.selenium.By;
 
 public class Label extends UIObject {
@@ -8,6 +9,6 @@ public class Label extends UIObject {
     }
 
     public String getText() {
-        return getDriver().findElement(By.xpath(this.locator)).getText();
+        return WebDriverDecorator.getDriver().findElement(By.xpath(this.locator)).getText();
     }
 }
