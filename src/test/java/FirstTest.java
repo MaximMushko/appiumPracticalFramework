@@ -1,14 +1,9 @@
 
-import appiumFramework.pages.pageObjects.DependanciesPage;
+import appiumFramework.pages.pageObjects.DependenciesPage;
 import appiumFramework.pages.pageObjects.HomePage;
 import appiumFramework.pages.pageObjects.PreferencePage;
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import appiumFramework.capabilities.CapabilitiesFactory;
 import org.testng.asserts.Assertion;
 
 import java.net.MalformedURLException;
@@ -33,12 +28,12 @@ public class FirstTest {
 
        preferencePage.dependenciesButton.click();
 
-        DependanciesPage dependanciesPage = new DependanciesPage();
-        assertion.assertTrue(dependanciesPage.wifiCheckox.isPresent(), "Oh shiittt!!!!");
+        DependenciesPage dependenciesPage = new DependenciesPage();
+        assertion.assertTrue(dependenciesPage.wifiCheckbox.isPresent(), "Oh shiittt!!!!");
 
-        dependanciesPage.wifiCheckox.setChecked();
+        dependenciesPage.wifiCheckbox.setChecked();
 
-        dependanciesPage.wifiCheckox.isChecked();
+        dependenciesPage.wifiCheckbox.isChecked();
     }
 
 }
