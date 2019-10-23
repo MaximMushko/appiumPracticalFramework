@@ -1,14 +1,19 @@
 package appiumFramework.pages.pageObjects;
 
 import appiumFramework.pages.commonPageComponents.Button;
+import appiumFramework.pages.commonPageComponents.Label;
 
-public class HomePage {
-    private String buttonLocator = ".//android.widget.TextView[@text='%s']";
+public class HomePage extends Page {
+    private static final String pageName = "English grammar test";
+
+    private String subtitleXpath = "";
+    private String buttonXpath = "";
+
     public HomePage() {
-
+        super(pageName);
     }
 
-    public Button app = new Button(String.format(buttonLocator, "App"));
-    public Button content = new Button(String.format(buttonLocator, "Content"));
-    public Button preference = new Button(String.format(buttonLocator, "Preference"));
+    Label pageSubtitle = new Label(subtitleXpath);
+    Button intermediateButton = new Button(String.format(buttonXpath, "Intermediate"));
+    Button upperIntermediateButton = new Button(String.format(buttonXpath, "Upper Intermediate"));
 }

@@ -25,7 +25,7 @@ public class CapabilitiesFactory {
     private static AndroidDriver<MobileElement> getAndroidCapability () throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
-        File file = new File("src/ApiDemos-debug.apk");
+        File file = new File("src/EnglishGrammar.apk");
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus 5 API 26");
         capabilities.setCapability(MobileCapabilityType.APP, file.getAbsolutePath());
         AndroidDriver<MobileElement> androidDriver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), capabilities);
